@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">MyGallery</div>
+
+  <nav class="nav">
+    <a href="#gallery">Explore</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search">
+  </div>
+
+  <div class="auth-buttons">
+    <button class="gallery-button" onclick="window.location.href='#gallery'">Gallery</button>
+  </div>
+</header>
+<section class="intro">
+  <h1>Welcome to MyGallery</h1>
+  <p>Discover a world of stunning images. Browse our collection and find your next favorite photo.</p>
+</section>
+<div class="filter-buttons">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('cars')">Cars</button>
+  <button onclick="filterImages('animals')">Animals</button>
+</div>
+<section class="gallery-section" id="gallery">
+  <div class="gallery">
+    <div class="gallery">
+  <img src="https://picsum.photos/300?1" data-category="nature" onclick="openLightbox(0)">
+  <img src="https://picsum.photos/300?2" data-category="cars" onclick="openLightbox(1)">
+  <img src="https://picsum.photos/300?3" data-category="animals" onclick="openLightbox(2)">
+  <img src="https://picsum.photos/300?4" data-category="nature" onclick="openLightbox(3)">
+  <img src="https://picsum.photos/300?5" data-category="cars" onclick="openLightbox(4)">
+  <img src="https://picsum.photos/300?6" data-category="animals" onclick="openLightbox(5)">
+  <img src="https://picsum.photos/300?7" data-category="nature" onclick="openLightbox(6)">
+  <img src="https://picsum.photos/300?8" data-category="cars" onclick="openLightbox(7)">
+  <img src="https://picsum.photos/300?9" data-category="animals" onclick="openLightbox(8)">
+  <img src="https://picsum.photos/300?10" data-category="nature" onclick="openLightbox(9)">
+</div>
+  </div>
+</section>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <img id="lightbox-img">
+    <button class="next" onclick="changeImage(1)">❯</button>
+  </div>
+
+<section class="about" id="about">
+  <h2>About MyGallery</h2>
+  <p>
+    MyGallery is a modern image gallery platform designed to showcase beautiful,
+    high-quality photos in a clean and minimal interface. Our goal is to provide
+    an inspiring visual experience where users can explore, discover, and enjoy
+    stunning imagery from around the world.
+  </p>
+
+  <p>
+    This project demonstrates responsive design, interactive lightbox functionality,
+    smooth animations, and structured frontend development using HTML, CSS, and JavaScript.
+  </p>
+
+  <p>
+    Built with simplicity and performance in mind, MyGallery focuses on user experience,
+    modern UI design, and seamless browsing.
+  </p>
+</section>
+
+  <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+    <p> Made by <a href="https://github.com/Faizan-Nadeem">Faizan Nadeem</a></p>
+</footer>
+
+</html>
